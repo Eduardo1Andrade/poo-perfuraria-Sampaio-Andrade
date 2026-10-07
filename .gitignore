@@ -1,5 +1,6 @@
-*.class,
+*.class
 build/ 
 dist/
 private/
 .vscode/
+target/
