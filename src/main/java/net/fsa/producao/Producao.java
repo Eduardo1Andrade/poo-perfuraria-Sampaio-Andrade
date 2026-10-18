@@ -10,8 +10,7 @@ import net.fsa.produtos.Produto;
 import net.fsa.produtos.Vela;
 
 public class Producao {
-// from funcionario produzir(qauntidade)
-    private int quantidade;
+    private int quantidade; // Recebe do metodo produzir em funcionário
 
     Producao(int quantidade){
         this.quantidade = quantidade;
@@ -19,6 +18,7 @@ public class Producao {
 
 Scanner scanner = new Scanner(System.in);
 
+    // Gera o lote criando o objeto selecionado pelo usuário em uma lista com a quantidade igual a quantidade
     public Lote gerarLote(){
         List<Produto> lista = new ArrayList<>();
         Produto p = produzirProduto();
@@ -30,6 +30,7 @@ Scanner scanner = new Scanner(System.in);
         return new Lote(lista);
     }
 
+    // Cria o objeto do produto de acordo com o produto que o funcionário quer produzir
     private Produto produzirProduto(){
         System.out.println("Insira o produto a produzir:\n"
                             +"1) Perfume\n"
