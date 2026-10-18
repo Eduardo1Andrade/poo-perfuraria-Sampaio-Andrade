@@ -1,5 +1,7 @@
 package net.fsa.producao;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import net.fsa.produtos.Difusor;
@@ -9,7 +11,7 @@ import net.fsa.produtos.Vela;
 
 public class Producao {
 // from funcionario produzir(qauntidade)
-    int quantidade;
+    private int quantidade;
 
     Producao(int quantidade){
         this.quantidade = quantidade;
@@ -17,7 +19,18 @@ public class Producao {
 
 Scanner scanner = new Scanner(System.in);
 
-    public Produto produzirProduto(){
+    public Lote gerarLote(){
+        List<Produto> lista = new ArrayList<>();
+        Produto p = produzirProduto();
+
+        for (int i = 0; i < this.quantidade; i++){
+            lista.add(p);
+        }
+
+        return new Lote(lista);
+    }
+
+    private Produto produzirProduto(){
         System.out.println("Insira o produto a produzir:\n"
                             +"1) Perfume\n"
                             +"2) Perfume personalizado\n"
