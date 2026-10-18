@@ -1,5 +1,5 @@
 package net.fsa.produtos;
 
-public class Perfume {
+public class Perfume extends Produto{
 
 }

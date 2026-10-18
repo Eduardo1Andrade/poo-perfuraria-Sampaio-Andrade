@@ -1,5 +1,5 @@
 package net.fsa.produtos;
 
-public class PerfumeEspecial {
+public interface PerfumeEspecial {
     
 }

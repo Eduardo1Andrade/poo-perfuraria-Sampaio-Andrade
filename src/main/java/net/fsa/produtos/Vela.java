@@ -1,5 +1,5 @@
 package net.fsa.produtos;
 
-public class Vela {
+public class Vela extends Produto{
 
 }
