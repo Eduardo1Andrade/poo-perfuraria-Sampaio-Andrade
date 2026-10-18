@@ -2,5 +2,5 @@
 ## Integrantes
 Nome do integrante| Usuário GitHub | Módulo
 -|-|-
-Francisco Felipe|flp-sp|
-Eduardo Andrade|Eduardo1Andrade|
+Francisco Felipe|flp-sp|Produção e Produtos
+Eduardo Andrade|Eduardo1Andrade|Pessoas
