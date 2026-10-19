@@ -17,10 +17,11 @@ public class Cliente extends Pessoa{
         this.inadiplemte = false;
         this.endereco = endereco;
     }
-
+    
+    //sobrecarga de getter Pessoa
     @Override 
-    public void getterInformarcaoPessoa () {
-        super.getterInformarcaoPessoa();
+    public void InformarcaoPessoa () {
+        super.InformarcaoPessoa();
 
         String statusinadiplemte;
         

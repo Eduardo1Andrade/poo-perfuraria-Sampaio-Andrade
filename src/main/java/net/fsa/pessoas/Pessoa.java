@@ -14,8 +14,8 @@ public abstract class Pessoa {
         this.telefone = telefone;
     }
 
-    //Getter 
-    public void getterInformarcaoPessoa (){
+    //Getter geral
+    public void InformarcaoPessoa (){
         System.out.println("Nome: " + this.nome + "\n" 
         + "CPF :" + this.cpf + "\n"
         + "Telefone: " + this.telefone
