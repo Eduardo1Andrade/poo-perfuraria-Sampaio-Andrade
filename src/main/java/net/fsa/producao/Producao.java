@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import net.fsa.produtos.Difusor;
 import net.fsa.produtos.Perfume;
+import net.fsa.produtos.PerfumeEspecial;
 import net.fsa.produtos.Produto;
 import net.fsa.produtos.Vela;
 
@@ -43,7 +44,7 @@ Scanner scanner = new Scanner(System.in);
                 return new Perfume();
 
             case 2:
-                return new Perfume();
+                return new PerfumeEspecial();
 
             case 3:
                 return new Difusor();
