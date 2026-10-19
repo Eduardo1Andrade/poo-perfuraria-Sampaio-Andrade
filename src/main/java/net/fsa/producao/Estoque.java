@@ -1,25 +1,29 @@
 package net.fsa.producao;
 
 import java.util.List;
+import net.fsa.produtos.Produto;
 
 public class Estoque {
-    // O estoque é a lista de todos os lotes, consequêntemente com todos os produtos
+    // O estoque é a lista com todos os produtos
     // É estático porque os mesmos dados vão ser acessado por diferentes classes
-    private static List<Lote> listaLotes;
+    private static List<Produto> estoqueTotal;
 
-    // Adiciona um lote a lista, sugestão é que seja chamada no método produzir, na classe funcionario
+    // Adiciona os produtos do lote a lista, sugestão é que seja chamada no método produzir, na classe funcionario
     public void adicionarLote(Lote lote){
-        listaLotes.add(lote);
+        List<Produto> listaProdutosLote = lote.getListaProdutos();
+        for (int i = 0; i < listaProdutosLote.size(); i++){
+            estoqueTotal.add(listaProdutosLote.get(i));
+        }
     }
 
     // Retorna a lista do estoque, para a compra do cliente
-    public List<Lote> getEstoque(){
-        return listaLotes;
+    public List<Produto> getEstoque(){
+        return estoqueTotal;
     }
 
-    // Imprime todos os lotes, para visualizar o estoque
+    // Imprime todos os produtos, para visualizar o estoque
     public void gerarEstoque(){
-        for(Lote l : getEstoque()){
+        for(Produto l : getEstoque()){
             System.out.println(l);
         }
     }

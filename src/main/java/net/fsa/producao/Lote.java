@@ -14,4 +14,9 @@ public class Lote {
         this.CODIGO = novoCodigo++; // Atribui um valor único ao lote e autoincrementa para o próximo lote
         this.listaProdutos = lista;
     }
+
+
+    public List<Produto> getListaProdutos() {
+        return listaProdutos;
+    }
 }
