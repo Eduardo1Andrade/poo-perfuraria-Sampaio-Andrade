@@ -41,10 +41,34 @@ Scanner scanner = new Scanner(System.in);
 
         switch (scanner.nextInt()) {
             case 1:
-                return new Perfume();
+                System.out.print("\nInsira o volume do frasco: ");
+                int volumeFrascoP = scanner.nextInt();
+                System.out.print("\nInsira o preço de venda: ");
+                float precoVendaP = scanner.nextFloat();
+                System.out.print("\nInsira a concenctração da essência: ");
+                float concentracaoEssenciaP = scanner.nextFloat();
+                System.out.print("\nInsira a categoria: ");
+                String categoriaP = scanner.nextLine();
+                System.out.print("\nInsira a maceração minima: ");
+                int maceracaoMinimaP = scanner.nextInt();
+
+                return new Perfume(volumeFrascoP, precoVendaP, concentracaoEssenciaP, categoriaP, maceracaoMinimaP);
 
             case 2:
-                return new PerfumeEspecial();
+                System.out.print("\nInsira o volume do frasco: ");
+                int volumeFrascoPe = scanner.nextInt();
+                System.out.print("\nInsira o preço de venda: ");
+                float precoVendaPe = scanner.nextFloat();
+                System.out.print("\nInsira a concenctração da essência: ");
+                float concentracaoEssenciaPe = scanner.nextFloat();
+                System.out.print("\nInsira a categoria: ");
+                String categoriaPe = scanner.nextLine();
+                System.out.print("\nInsira a maceração minima: ");
+                int maceracaoMinimaPe = scanner.nextInt();
+                System.out.print("\nInsira a maceração minima: ");
+                String nomeGravado = scanner.nextLine();
+
+                return new PerfumeEspecial(volumeFrascoPe, precoVendaPe, concentracaoEssenciaPe, categoriaPe, maceracaoMinimaPe, nomeGravado);
 
             case 3:
                 return new Difusor();
