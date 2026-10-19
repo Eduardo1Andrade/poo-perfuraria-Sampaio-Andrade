@@ -71,10 +71,24 @@ Scanner scanner = new Scanner(System.in);
                 return new PerfumeEspecial(volumeFrascoPe, precoVendaPe, concentracaoEssenciaPe, categoriaPe, maceracaoMinimaPe, nomeGravado);
 
             case 3:
-                return new Difusor();
+                System.out.print("\nInsira o volume do frasco: ");
+                int volumeFrascoD = scanner.nextInt();
+                System.out.print("\nInsira o preço da venda: ");
+                float precoVendaD = scanner.nextFloat();
+                System.out.print("\nInsira a quantidade de varetas: ");
+                int quantidadeVaretas = scanner.nextInt();
+
+                return new Difusor(volumeFrascoD, precoVendaD, quantidadeVaretas);
 
             case 4:
-                return new Vela();
+                System.out.print("\nInsira o preço de venda: ");
+                float precoVendaV = scanner.nextFloat();
+                System.out.print("\nInsira o peso da cera: ");
+                float pesoCera = scanner.nextFloat();
+                System.out.print("\nInsira a concentração da fragrância: ");
+                float concentracaoFragancia = scanner.nextFloat();
+                
+                return new Vela(0, precoVendaV, pesoCera, concentracaoFragancia);
         
             default:
                 break;

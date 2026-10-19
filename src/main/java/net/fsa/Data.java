@@ -28,13 +28,13 @@ public class Data {
 	static MateriaPrima alcool = new MateriaPrima(
 			"Álcool de Cereais", "Álcool para base de perfumes e home sprays",
 			LocalDate.of(2027, 12, 31), 18.90f);
-	static MateriaPrima parafina = new MateriaPrima(
+	public static MateriaPrima parafina = new MateriaPrima(
 			"Parafina", "Parafina para fabricação de velas",
 			LocalDate.of(2030, 1, 1), 22.00f);
 	static MateriaPrima vareta = new MateriaPrima(
 			"Vareta de Difusor", "Vareta de bambu para difusor de ambiente",
 			LocalDate.of(2031, 5, 20), 0.80f);
-	static MateriaPrima cera = new MateriaPrima(
+	public static MateriaPrima cera = new MateriaPrima(
 			"Cera de Soja", "Cera vegetal para velas aromáticas",
 			LocalDate.of(2029, 4, 15), 31.40f);
 

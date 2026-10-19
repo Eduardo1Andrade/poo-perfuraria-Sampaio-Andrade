@@ -8,4 +8,5 @@ import net.fsa.producao.MateriaPrima;
 public class Simulacao {
     public static void main(String[] args) {
         List<MateriaPrima> materiaPrima = Data.materiaPrima();
+    }
 }
