@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import net.fsa.produtos.Difusor;
 import net.fsa.produtos.Perfume;
-import net.fsa.produtos.PerfumeEspecial;
 import net.fsa.produtos.Produto;
 import net.fsa.produtos.Vela;
 
@@ -68,7 +67,7 @@ Scanner scanner = new Scanner(System.in);
                 System.out.print("\nInsira a maceração minima: ");
                 String nomeGravado = scanner.nextLine();
 
-                return new PerfumeEspecial(volumeFrascoPe, precoVendaPe, concentracaoEssenciaPe, categoriaPe, maceracaoMinimaPe, nomeGravado);
+                return new Perfume(volumeFrascoPe, precoVendaPe, concentracaoEssenciaPe, categoriaPe, maceracaoMinimaPe, nomeGravado);
 
             case 3:
                 System.out.print("\nInsira o volume do frasco: ");
