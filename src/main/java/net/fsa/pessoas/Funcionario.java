@@ -1,5 +1,10 @@
 package net.fsa.pessoas;
 
+import java.util.Scanner;
+
+import net.fsa.producao.Estoque;
+import net.fsa.producao.Producao;
+
 public class Funcionario extends Pessoa {
     //Dados funcionario
     private String cargo;
@@ -22,5 +27,17 @@ public class Funcionario extends Pessoa {
             "cargo :" + this.cargo
             + "CNPJ: " + this.cnpj
         );
+    }
+
+    public void produzirNovo(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Insira a quantidade a ser produzida: ");
+        Producao producao = new Producao(scanner.nextInt());
+        Estoque estoque = new Estoque();
+
+        estoque.adicionarLote(producao.gerarLote());
+
+        scanner.close();
     }
 }

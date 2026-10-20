@@ -12,7 +12,7 @@ import net.fsa.produtos.Vela;
 public class Producao {
     private int quantidade; // Recebe do metodo produzir em funcionário
 
-    Producao(int quantidade){
+    public Producao(int quantidade){
         this.quantidade = quantidade;
     }
 
@@ -90,6 +90,7 @@ Scanner scanner = new Scanner(System.in);
                 return new Vela(0, precoVendaV, pesoCera, concentracaoFragancia);
         
             default:
+                System.out.println("Entrada de produto inválida!\nAbortando operação...");
                 break;
         }
         return null;
