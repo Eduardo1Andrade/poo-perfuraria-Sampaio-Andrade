@@ -34,6 +34,5 @@ public class Funcionario extends Pessoa {
 
         estoque.adicionarLote(producao.gerarLote());
         scanner.close();
-        estoque.gerarEstoque();
     }
 }
