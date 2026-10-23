@@ -8,7 +8,6 @@ public class MateriaPrima {
     private LocalDate dataVencimento;
     private float precoUnidade;
 
-
     public MateriaPrima(String nome, String descricao, LocalDate dataVencimento, float precoUnidade) {
         this.nome = nome;
         this.descricao = descricao;
@@ -16,19 +15,28 @@ public class MateriaPrima {
         this.precoUnidade = precoUnidade;
     }
 
-    // Verifica se a data de vencimento já passou ou é hoje
-    public boolean estaVencido(){
+    public boolean estaVencido() {
         LocalDate d = LocalDate.now();
-        if(!dataVencimento.isAfter(d)){
+        if (!dataVencimento.isAfter(d)) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    // Calcula e retorna o custo individual do material
-    public float gerarCustoMaterial(float quantidade){
+    public float gerarCustoMaterial(float quantidade) {
+        if (estaVencido()) {
+            return 0.0f;
+        }
         return quantidade * this.precoUnidade;
+    }
+
+    public LocalDate getDataVencimento() {
+        return dataVencimento;
+    }
+
+    @Override
+    public String toString() {
+        return nome;
     }
 }

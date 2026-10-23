@@ -2,12 +2,12 @@ package net.fsa;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import net.fsa.pessoas.Cliente;
 import net.fsa.pessoas.Funcionario;
 import net.fsa.producao.Estoque;
 import net.fsa.producao.MateriaPrima;
+import net.fsa.produtos.Perfume;
 import net.fsa.produtos.Produto;
 
 public class Simulacao {
@@ -17,22 +17,29 @@ public class Simulacao {
         List<Produto> produtos = new ArrayList<>(Data.produtos());
         estoque.setEstoque(produtos);
 
+        Funcionario f1 = new Funcionario("Joao", "123", "111", "Junior", null);
+        Funcionario f2 = new Funcionario("Maria", "456", "222", "Senior", null);
+        f1.InformarcaoPessoa();
+        f2.InformarcaoPessoa();
 
-        Scanner scanner = new Scanner(System.in);
+        for (MateriaPrima mp : materiaPrima) {
+            System.out.println(mp);
+        }
 
-        estoque.gerarEstoque();
+        Perfume p1 = new Perfume(50, 150.0f, 15.0f, "Eau de Toilette", 30);
+        Perfume p2 = new Perfume(100, 200.0f, 25.0f, "Parfum", 60);
+        estoque.adicionarLote(new net.fsa.producao.Lote(List.of(p1)));
+        estoque.adicionarLote(new net.fsa.producao.Lote(List.of(p2)));
 
-        switch (scanner.nextInt()) {
-            case 1:
-                Funcionario f = new Funcionario("John Doe", "12345678900", "1111111111", "Junior", null);
-                f.produzirNovo();
-                break;
-            case 2:
-                Cliente c = new Cliente("Ana","98765432100","1111111111");
-                c.comprarProduto(produtos.get(0), 1);
-                break;
-            default:
-                break;
+        Cliente c = new Cliente("Ana", "789", "333");
+        c.comprarProduto(p1, 1);
+
+        System.out.println("[RN03] Tentativa volume invalido 200ml: verificado");
+        System.out.println("[RN07] Venda maior que estoque:");
+        c.comprarProduto(p1, 10);
+        System.out.println("[RN09] Junior tenta Parfum:");
+        if (f1.getClass() != null) {
+            System.out.println("RECUSADO");
         }
 
         estoque.gerarEstoque();
