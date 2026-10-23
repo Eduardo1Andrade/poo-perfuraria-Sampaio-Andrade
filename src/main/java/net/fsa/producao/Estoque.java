@@ -22,6 +22,7 @@ public class Estoque {
         return Estoque.estoqueTotal;
     }
 
+
     // Imprime todos os produtos, para visualizar o estoque
     public void gerarEstoque(){
         for(Produto l : getEstoque()){

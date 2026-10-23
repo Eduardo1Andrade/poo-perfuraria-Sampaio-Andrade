@@ -24,7 +24,7 @@ public class Funcionario extends Pessoa {
             "cargo :" + this.cargo
         );
     }
-
+    //Produzir novo produto
     public void produzirNovo(){
         Scanner scanner = new Scanner(System.in);
 
@@ -33,7 +33,7 @@ public class Funcionario extends Pessoa {
         Estoque estoque = new Estoque();
 
         estoque.adicionarLote(producao.gerarLote());
-
         scanner.close();
+        estoque.gerarEstoque();
     }
 }

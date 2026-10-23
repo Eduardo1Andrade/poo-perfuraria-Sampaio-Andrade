@@ -11,5 +11,6 @@ public class Simulacao {
 
         Funcionario f = new Funcionario("John Doe", "12345678900", "1111111111", "Junior", null);
         f.produzirNovo();
+    
     }
 }
