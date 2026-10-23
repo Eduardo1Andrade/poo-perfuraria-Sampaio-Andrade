@@ -27,4 +27,15 @@ public class Perfume extends Produto{
     public boolean fimMaceracaoMinima(int diasPassados){
         return (diasPassados >= this.maceracaoMinima) ? true : false;
     }
+
+
+    @Override
+public String toString() {
+    String s = String.format("Perfume [%s] | %s | Essência: %.1f%% | Maceração mínima: %d dias",
+            categoria, super.toString(), concentracaoEssencia, maceracaoMinima);
+    if (nomeGravado != null) {
+        s += " | Nome gravado: " + nomeGravado;
+    }
+    return s;
+}
 }

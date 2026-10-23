@@ -19,4 +19,11 @@ public class Vela extends Produto{
         this.parafina = Data.parafina;
         this.concentracaoFragancia = concentracaoFragancia;
     }
+
+
+    @Override
+public String toString() {
+    return String.format("Vela | %s | Cera: %s (%.1fg) | Fragrância: %.1f%%",
+            super.toString(), cera, pesoCera, concentracaoFragancia);
+}
 } 

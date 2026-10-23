@@ -23,6 +23,11 @@ public class Estoque {
     }
 
 
+    public void setEstoque(List<Produto> lista){
+        Estoque.estoqueTotal = lista;
+    }
+
+
     // Imprime todos os produtos, para visualizar o estoque
     public void gerarEstoque(){
         for(Produto l : getEstoque()){

@@ -5,6 +5,10 @@ import java.util.List;
 
 import net.fsa.producao.MateriaPrima;
 import net.fsa.producao.OleosEssenciais;
+import net.fsa.produtos.Difusor;
+import net.fsa.produtos.Perfume;
+import net.fsa.produtos.Produto;
+import net.fsa.produtos.Vela;
 
 public class Data {
 	// 5 óleos essenciais
@@ -42,5 +46,36 @@ public class Data {
 	public static List<MateriaPrima> materiaPrima() {
 		return List.of(lavanda, laranja, sandalo, hortela, ylang,
 				alcool, parafina, vareta, cera);
+	}
+
+	public static Perfume perfumeLavanda = new Perfume(
+			100, 189.90f, 20.0f, "Eau de Parfum", 30);
+
+	public static Perfume perfumeSandalo = new Perfume(
+			50, 149.90f, 15.0f, "Eau de Toilette", 20);
+
+
+	public static Perfume perfumeYlang = new Perfume(
+			100, 219.90f, 25.0f, "Parfum", 45, "Maria");
+
+
+	public static Difusor difusorLaranja = new Difusor(
+			250, 79.90f, 6);
+
+	public static Difusor difusorHortela = new Difusor(
+			200, 69.90f, 5);
+
+
+	public static Vela velaLavanda = new Vela(
+			180, 54.90f, 150.0f, 8.0f);
+
+	public static Vela velaSandalo = new Vela(
+			250, 69.90f, 220.0f, 10.0f);
+
+	// Retorna a lista com os objetos criados
+	public static List<Produto> produtos() {
+		return List.of(perfumeLavanda, perfumeSandalo, perfumeYlang,
+				difusorLaranja, difusorHortela,
+				velaLavanda, velaSandalo);
 	}
 }

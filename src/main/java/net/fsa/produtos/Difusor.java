@@ -9,4 +9,11 @@ public class Difusor extends Produto{
         super(volumeFrasco, precoVenda);
         this.quantidadeVaretas = quantidadeVaretas;
     }
+
+
+    @Override
+public String toString() {
+    return String.format("Difusor | %s | Varetas: %d",
+            super.toString(), quantidadeVaretas);
+}
 } 
